@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="c" class="org.techhub.PracticeApplication.Test">
+	</bean>
+	<bean id="p" class="org.techhub.PracticeApplication.Test">
+	  <constructor-arg value="vicku" type="java.lang.String" index="0"></constructor-arg>
+	  <constructor-arg value="1" type="int" index="1"></constructor-arg>
+	</bean>
+	<bean id="po" class="org.techhub.PracticeApplication.Employee">
+	  <property name="id" value="1"></property>
+	  <property name="name" value="vikcy"></property>
+	  <property name="sal" value="100"></property>
+	</bean>
+	<bean id="cc" class="org.techhub.PracticeApplication.Collection">
+	  <property name="EmployeeList">
+	     <list>
+	        <value>Vikcy</value>
+	        <value>Vikas</value>
+	        <value>Vi</value>
+	     </list>
+	  </property>
+	</bean>
+	<bean id="m" class="org.techhub.PracticeApplication.Mapp">
+	 <property name="EmployeeList">
+	   <map>
+	      <entry key="1" value="vickyu"></entry>
+	      <entry key="2" value="dggd"></entry>
+	      <entry key="3" value="dhhd"></entry>
+	   </map>
+	 </property>
+	</bean>
+	<bean id="pp" class="org.techhub.PracticeApplication.Product">
+	  <property name="id" value="1"></property>
+	  <property name="name" value="vikcy"></property>
+	  <property name="sal" value="100"></property>
+	</bean>
+	<bean id="s" class="org.techhub.PracticeApplication.shop">
+	  <property name="product" ref="pp"/>
+	</bean>
+</beans>

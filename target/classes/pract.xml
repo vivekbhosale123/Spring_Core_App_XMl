@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="ppp" class="org.techhub.PracticeApplication.Object.Product">
+		<property name="id" value="1"></property>
+		<property name="name" value="vicku"></property>
+		<property name="sal" value="100"></property>
+	</bean>
+	<bean id="sss" class="org.techhub.PracticeApplication.Object.Shop">
+     <property name="product" ref="ppp"></property>
+	</bean>
+</beans>

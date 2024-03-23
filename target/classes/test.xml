@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="t1" class="org.techhub.constructor.Test">
+	</bean>
+	<bean id="t" class="org.techhub.parameterized.Test">
+	    <constructor-arg value="vicky" type="java.lang.String" index="0"></constructor-arg>
+	    <constructor-arg value="1" type="int" index="1"></constructor-arg>
+	    <constructor-arg value="100" type="int" index="2"></constructor-arg>
+	</bean>
+	<bean id="c" class="org.techhub.Collection.Company">
+	<property name="EmployeList">
+	    <list>
+	       <value>Akshy</value>
+	       <value>vicky</value>
+	       <value>ganu</value>
+	    </list>
+	</property>
+	</bean>
+	<bean id="m" class="org.techhub.Map.Company">
+          <property name="Employee">
+            <map>
+             <entry key="2" value="vikcy"></entry>
+             <entry key="1" value="bhiii"></entry>
+            </map>
+          </property>
+	</bean>
+	<bean id="o" class="org.techhub.Object.Product">
+	    <property name="id" value="1"></property>
+	    <property name="name" value="vicky"></property>
+	    <property name="price" value="100"></property>
+	</bean>
+	<bean id="p" class="org.techhub.Object.Shop">
+	    <property name="product" ref="o"></property>
+	</bean>
+	<bean id="product" class="org.techhub.byname.Product">
+	    <property name="id" value="1"></property>
+	    <property name="name" value="vicky"></property>
+	    <property name="price" value="100"></property>
+	</bean>
+	<bean id="s" class="org.techhub.byname.Shop" autowire="byName">
+	</bean>
+	
+	
+	<bean id="pro" class="org.techhub.bytype.Producte">
+	    <property name="id" value="1"></property>
+	    <property name="name" value="vicky"></property>
+	    <property name="price" value="100"></property>
+	</bean>
+	<bean id="s1" class="org.techhub.bytype.Shope" autowire="byType">
+	</bean>
+	
+	<bean id="produ" class="org.techhub.byconstructor.Producty">
+	    <property name="id" value="1"></property>
+	    <property name="name" value="vicky"></property>
+	    <property name="price" value="100"></property>
+	</bean>
+	<bean id="s2" class="org.techhub.byconstructor.Shop" autowire="constructor">
+	</bean>
+	<bean id="pr" class="org.techhub.autodetect.Producty">
+	    <property name="id" value="1"></property>
+	    <property name="name" value="vicky"></property>
+	    <property name="price" value="100"></property>
+	</bean>
+	<bean id="s3" class="org.techhub.autodetect.Shop" autowire="autodetect">
+	</bean>
+	<bean id="tt" class="org.techhub.scope.singleton" scope="prototype"></bean>
+</beans>
